@@ -120,6 +120,8 @@ void loop() {
 //################################################################### FUNCIONAMIENTO NORMAL, ADELANTE Y HACIA ATRAS
   if(inicioCarrera == false){
 
+    activarServo(true);///VALOR DE PRUEBA
+
     while(finalCarrera == true){
 
       //Todo el espacio con hashtag se debe modificar para dar la funcion de dar comida a los peces##
@@ -152,12 +154,19 @@ void loop() {
 
     //Aca se apaga el led rojo, ya que llego donde esta el led azul
     digitalWrite(led, LOW);  
+
+    activarServo(false);//VALOR DE PRUEBA
+
     //Antes de esta parta de cuando se apaga el led se debe cerrar el servo A 0 grados CUIDADO CON LA LOGICA
 
     delay(2000);
 
   }
   else if(finalCarrera == false){
+
+
+
+    activarServo(true); ///// VALORES DE PRUEBA
 
     while(inicioCarrera == true){
 
@@ -190,6 +199,8 @@ void loop() {
     digitalWrite(in3, LOW);
     //Aca se apaga el led 
     digitalWrite(led2, LOW);
+
+    activarServo(false);  //// VALORES DE PRUEBA
     //Antes de esta parta de cuando se apaga el led se debe cerrar el servo A 0 grados CUIDADO CON LA LOGICA
 
     delay(2000);
@@ -197,6 +208,9 @@ void loop() {
   } 
 
 //###################################################################
+
+}
+
 
 void activarServo(bool activar){
   if(activar == true){
@@ -206,7 +220,6 @@ void activarServo(bool activar){
   }
 }
 
-}
 
 bool finalDeCarrera(int ledGenerico, int imanGenerico) {
 
@@ -225,9 +238,6 @@ bool finalDeCarrera(int ledGenerico, int imanGenerico) {
     return true;
   }
 }
-
-bool
-
 
 
 
