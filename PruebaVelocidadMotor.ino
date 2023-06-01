@@ -72,6 +72,8 @@ void loop() {
   bool inicioCarrera = finalDeCarrera(led, iman);
   bool finalCarrera = finalDeCarrera(led2, iman2);
 
+  activarServo(false);
+
 
 //################################################################### CORTE DE LUZ, NO MODIFICAR,
 //TODO EL WHILE ES POR SI HAY CORTE DE LUZ
